@@ -81,12 +81,38 @@ button:hover {
   color: white;
 }
 
-@@keyframes wrong {
-  from {background-color: red}
-  to {background-color: none}
+.wrong{
+  animation-name: flash-red;
+  animation-duration: 0.5s;
 }
 
-@@keyframes correct {
-from {background-color: green}
-to {background-color: none}
+.correct {
+  animation-name: flash-green;
+  animation-duration: 0.5s;
+}
+
+@keyframes flash-red {
+  0%{
+    background: red;
+  }
+  50%{
+    background: red;
+    opacity: 0.5;
+  }
+  100%{
+    background: none;
+  }
+}
+
+@keyframes flash-green {
+  0%{
+    background: green;
+  }
+  50%{
+    background: green;
+    opacity: 0.5;
+  }
+  100%{
+    background: none;
+  }
 }
