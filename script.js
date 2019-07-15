@@ -26,16 +26,16 @@ const numberUp = () => {
 const buttonActiveCheck = () => {
   var guessText = parseInt($('#number-field').val(), 10);
   if (guessText === undefined || guessText === 0){
-    $('#number-down').disabled = true;
+    $('#number-down').prop('disabled', true);
     $('#number-down').html('');
   } else if (guessText === 10) {
-    $('#number-up').disabled = true;
+    $('#number-up').prop('disabled', true);
     $('#number-up').html('');
   }
   else {
-    $('#number-down').disabled = false;
+    $('#number-down').prop('disabled', false);
     $('#number-down').html('-');
-    $('#number-up').disabled = false;
+    $('#number-up').prop('disabled', false);
     $('#number-up').html('+');
   }
 
